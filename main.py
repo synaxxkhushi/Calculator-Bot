@@ -112,7 +112,7 @@ async def cb_data(_, message):
         data = message.data
         try:
             message_text = message.message.text.split("\n")[0].strip().split("=")[0].strip()
-            text = '' if CALCULATE_TEXT in message_text else message_text
+            text = '' if in message_text else message_text
             if data == "=":
                 text = str(eval(text))
             elif data == "DEL":
