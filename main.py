@@ -29,7 +29,7 @@ START_BUTTONS = InlineKeyboardMarkup(
     ]
 )
 
-CALCULATE_TEXT = "Made by @FayasNoushad"
+CALCULATE_TEXT = ""
 
 CALCULATE_BUTTONS = InlineKeyboardMarkup(
     [
