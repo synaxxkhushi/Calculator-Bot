@@ -112,7 +112,7 @@ async def cb_data(_, message):
         data = message.data
         try:
             message_text = message.message.text.split("\n")[0].strip().split("=")[0].strip()
-            text = '' if in message_text else message_text
+            text = '' if CALCULATE_TEXT in message_text else message_text
             if data == "=":
                 text = str(eval(text))
             elif data == "DEL":
@@ -122,7 +122,7 @@ async def cb_data(_, message):
             else:
                 text = message_text + data
             await message.message.edit_text(
-                text=f"{text}\n\n{CALCULATE_TEXT}",
+                text=f"{text}\n\n\n{CALCULATE_TEXT}",
                 disable_web_page_preview=True,
                 reply_markup=CALCULATE_BUTTONS
             )
